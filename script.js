@@ -48,14 +48,12 @@ function validarRespuestas() {
         minidivsDentro.forEach(minidiv => {
             if (minidiv.dataset.category === categoriaCorrecta) {
                 respuestasCorrectas++;
+                minidiv.style.backgroundColor = 'green';
+            } else { minidiv.style.backgroundColor = 'red';
+
             }
         });
     });
 
-    // Mostrar el mensaje de resultados
-    if (respuestasCorrectas === minidivs.length) {
-        mensaje.innerHTML = '<p>¡Felicidades! Todas las palabras están correctamente clasificadas.</p>';
-    } else {
-        mensaje.innerHTML = `<p>Has clasificado correctamente ${respuestasCorrectas} palabra(s). ¡Inténtalo de nuevo!</p>`;
-    }
+    
 }
